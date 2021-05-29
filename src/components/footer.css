@@ -1,0 +1,15 @@
+.footer-page {
+    border: 1px solid blue;
+    padding: 6px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e3f2fd;
+}
+
+@media (max-width: 768px) {
+    .footer-page {
+        position:inherit;
+    }
+}

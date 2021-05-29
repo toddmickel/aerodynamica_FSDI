@@ -1,0 +1,10 @@
+.qp-page {
+    width: 10rem;
+}
+
+.qp-label {
+    border: 1px solid black;
+    padding: 0 1rem;
+    margin: .5rem;
+    background-color: whitesmoke;
+}
