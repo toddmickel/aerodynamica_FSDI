@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { Slide } from "react-slideshow-image";
+
+import "react-slideshow-image/dist/styles.css";
 import "./home.css";
 
 class Home extends Component {
@@ -22,6 +25,28 @@ class Home extends Component {
             </a>
             .
           </p>
+        </div>
+        <div className="slideshow">
+          <Slide easing="ease" pauseOnHover={false} arrows={false} duration={3000}>
+            <div className="each-slide">
+              <div style={{ backgroundImage: "url(/img/others/gv.jpg" }}></div>
+            </div>
+            <div className="each-slide">
+              <div style={{ backgroundImage: "url(/img/products/altimeter.jpg" }}></div>
+            </div>
+            <div className="each-slide">
+              <div style={{ backgroundImage: "url(/img/others/b787.jpg" }}></div>
+            </div>
+            <div className="each-slide">
+              <div style={{ backgroundImage: "url(/img/products/g1000_DesktopTrainer.jpg" }}></div>
+            </div>
+            <div className="each-slide">
+              <div style={{ backgroundImage: "url(/img/others/c172.jpg" }}></div>
+            </div>
+            <div className="each-slide">
+              <div style={{ backgroundImage: "url(/img/products/GI_275_ADI.jpg" }}></div>
+            </div>
+          </Slide>
         </div>
         <div className="logo">
           <img src="/img/logo/propeller.jpg" alt="logo" className="App-logo"></img>

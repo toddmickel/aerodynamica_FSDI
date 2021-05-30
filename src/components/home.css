@@ -25,3 +25,30 @@
         display: none;
     }
 }
+
+.slideshow {
+    width: 50%;
+    margin: auto;
+    height: 10rem;
+    margin-bottom: 3rem;
+}
+
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 10rem;
+  }
+
+  @media (min-height: 700px) {
+      .slideshow {
+          position: fixed;
+          left: 50%;
+          bottom: 25%;
+          transform: translate(-50%, 50%);
+
+      }
+  }
