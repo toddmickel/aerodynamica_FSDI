@@ -1,0 +1,27 @@
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.home-text {
+    width: 66%;
+    text-align: justify;
+}
+
+#email-lg {
+    display: inline;
+}
+
+#email-sm {
+    display: none;
+}
+
+@media (max-width: 458px) {
+    #email-sm {
+        display: inline;
+    }
+
+    #email-lg {
+        display: none;
+    }
+}
