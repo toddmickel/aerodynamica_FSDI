@@ -19,13 +19,9 @@ class Product extends Component {
           <h5>{this.props.prodData.title}</h5>
           <p className="description">{this.props.prodData.description}</p>
           <div>
-            <label>
-              Price Per Unit: <NumberFormat value={this.state.price} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={2} fixedDecimalScale={true} />
-            </label>
+            <label>Price Per Unit: {this.ppuDisplay()}</label>
             <br />
-            <label id="total-price">
-              Total Price: <NumberFormat value={this.state.price * this.state.quan} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={2} fixedDecimalScale={true} />
-            </label>
+            <label id="total-price">Total Price: {this.totalPriceDisplay()}</label>
           </div>
 
           <QuantityPicker onQuantityChanged={this.onQuantityChanged} mins={this.props.prodData.minimum}></QuantityPicker>
@@ -38,6 +34,23 @@ class Product extends Component {
 
   onQuantityChanged = (newQuantity) => {
     this.setState({ quan: newQuantity });
+  };
+
+  ppuDisplay = () => {
+    if (this.state.price % 1 === 0) {
+      return <NumberFormat value={this.state.price} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={0} fixedDecimalScale={true} />;
+    } else {
+      return <NumberFormat value={this.state.price} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={2} fixedDecimalScale={true} />;
+    }
+  };
+
+  totalPriceDisplay = () => {
+    let total = this.state.price * this.state.quan;
+    if (total % 1 === 0) {
+      return <NumberFormat value={total} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={0} fixedDecimalScale={true} />;
+    } else {
+      return <NumberFormat value={total} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={2} fixedDecimalScale={true} />;
+    }
   };
 }
 
