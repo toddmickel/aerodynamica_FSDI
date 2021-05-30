@@ -23,6 +23,10 @@
     max-height: 100%;
 }
 
+#total-price {
+    color: red;
+}
+
 
 @media (max-width: 768px) {
     .product {

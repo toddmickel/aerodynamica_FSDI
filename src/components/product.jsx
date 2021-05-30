@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./product.css";
 import QuantityPicker from "./quantityPicker";
+import NumberFormat from "react-number-format";
 
 class Product extends Component {
   state = {
@@ -18,9 +19,13 @@ class Product extends Component {
           <h5>{this.props.prodData.title}</h5>
           <p className="description">{this.props.prodData.description}</p>
           <div>
-            <label>Price Per Unit: ${this.state.price.toFixed(2)}</label>
+            <label>
+              Price Per Unit: <NumberFormat value={this.state.price} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={2} fixedDecimalScale={true} />
+            </label>
             <br />
-            <label>Total Price: ${(this.state.price * this.state.quan).toFixed(2)}</label>
+            <label id="total-price">
+              Total Price: <NumberFormat value={this.state.price * this.state.quan} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={2} fixedDecimalScale={true} />
+            </label>
           </div>
 
           <QuantityPicker onQuantityChanged={this.onQuantityChanged} mins={this.props.prodData.minimum}></QuantityPicker>
@@ -31,10 +36,10 @@ class Product extends Component {
     );
   }
 
-  /*  onQuantityChanged = (newQuantity) => {
-    console.log("onQuantityChanged successfully called");
+  onQuantityChanged = (newQuantity) => {
+    console.log("onQuantityChanged successfully called with new quantity of " + newQuantity);
     this.setState({ quan: newQuantity });
-  };*/
+  };
 }
 
 export default Product;

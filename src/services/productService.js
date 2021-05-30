@@ -6,7 +6,7 @@ var data = [
     image: "altimeter.jpg",
     title: "Analog Altimeter",
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
-    price: 500.0,
+    price: 500.5,
     minimum: 1,
   },
   {
@@ -24,7 +24,7 @@ var data = [
     image: "G500_TXi.jpg",
     title: "Garmin 500 TXi",
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
-    price: 2000.0,
+    price: 1999.99,
     minimum: 1,
   },
   {
@@ -33,7 +33,7 @@ var data = [
     image: "G1000_DesktopTrainer.jpg",
     title: "Garmin 1000 Desktop Trainer",
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
-    price: 3000.0,
+    price: 3299.99,
     minimum: 1,
   },
   {
