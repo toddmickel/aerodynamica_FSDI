@@ -37,7 +37,6 @@ class Product extends Component {
   }
 
   onQuantityChanged = (newQuantity) => {
-    console.log("onQuantityChanged successfully called with new quantity of " + newQuantity);
     this.setState({ quan: newQuantity });
   };
 }

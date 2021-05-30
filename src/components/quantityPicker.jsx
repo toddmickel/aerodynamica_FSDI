@@ -24,19 +24,16 @@ class QuantityPicker extends Component {
   increaseQuantity = () => {
     this.setState({ quantity: this.state.quantity + 1 * this.props.mins });
     this.setState({ updated: true });
-    console.log("After increasing quantity: " + this.state.quantity);
   };
 
   decreaseQuantity = () => {
     if (this.state.quantity > this.props.mins) {
       this.setState({ quantity: this.state.quantity - 1 * this.props.mins });
       this.setState({ updated: true });
-      console.log("After decreasing quantity: " + this.state.quantity);
     }
   };
 
   componentDidUpdate() {
-    console.log("During componentDidUpdate: " + this.state.quantity);
     if (this.state.updated === true) {
       this.props.onQuantityChanged(this.state.quantity);
       this.setState({ updated: false });

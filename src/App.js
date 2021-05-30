@@ -9,11 +9,11 @@ import Catalog from "./components/catalog";
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
+      <NavBar />
 
-      <Catalog></Catalog>
+      <Catalog />
 
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }
