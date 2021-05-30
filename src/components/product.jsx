@@ -4,24 +4,26 @@ import QuantityPicker from "./quantityPicker";
 
 class Product extends Component {
   state = {
-    price: 500,
-    quan: 1,
+    price: this.props.prodData.price,
+    quan: this.props.prodData.minimum,
   };
 
   render() {
     return (
       <React.Fragment>
         <div className="product">
-          <img src="/img/products/altimeter.jpg" alt="altimeter" className="prod-image"></img>
-          <h5>Product Name</h5>
-          <p className="description">Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.</p>
+          <div className="prod-img-cont">
+            <img src={"/img/products/" + this.props.prodData.image} alt="altimeter" className="prod-image"></img>
+          </div>
+          <h5>{this.props.prodData.title}</h5>
+          <p className="description">{this.props.prodData.description}</p>
           <div>
-            <label>Price Each: ${this.state.price}</label>
+            <label>Price Per Unit: ${this.state.price.toFixed(2)}</label>
             <br />
-            <label>Total Price: ${this.state.price * this.state.quan}</label>
+            <label>Total Price: ${(this.state.price * this.state.quan).toFixed(2)}</label>
           </div>
 
-          <QuantityPicker onQuantityChanged={this.onQuantityChanged}></QuantityPicker>
+          <QuantityPicker onQuantityChanged={this.onQuantityChanged} mins={this.props.prodData.minimum}></QuantityPicker>
 
           <button className="btn btn-sm btn-info">Add</button>
         </div>

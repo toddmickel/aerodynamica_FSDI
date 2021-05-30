@@ -3,7 +3,7 @@ import "./quantityPicker.css";
 
 class QuantityPicker extends Component {
   state = {
-    quantity: 1,
+    quantity: this.props.mins,
   };
 
   render() {
@@ -22,14 +22,14 @@ class QuantityPicker extends Component {
 
   increaseQuantity = () => {
     console.log("Setting new quantity");
-    this.setState({ quantity: this.state.quantity + 1 });
+    this.setState({ quantity: this.state.quantity + 1 * this.props.mins });
     //    this.props.onQuantityChanged(this.state.quantity);
     console.log(this.state.quantity);
   };
 
   decreaseQuantity = () => {
     if (this.state.quantity > 1) {
-      this.setState({ quantity: this.state.quantity - 1 });
+      this.setState({ quantity: this.state.quantity - 1 * this.props.mins });
       //      this.props.onQuantityChanged(this.state.quantity);
       console.log(this.state.quantity);
     }
