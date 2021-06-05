@@ -1,5 +1,6 @@
 // create the below using imrc
 import React, { Component } from "react";
+import { Link } from "react-router-dom"; // Creates a Single Page Application.  ***
 import "./navBar.css";
 
 // create the below using CC
@@ -18,14 +19,19 @@ class NavBar extends Component {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="/catalog">
+                <Link className="nav-link active" to="/catalog">
                   Catalog
-                </a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" to="/about">
+                  About Us
+                </Link>
               </li>
             </ul>
           </div>

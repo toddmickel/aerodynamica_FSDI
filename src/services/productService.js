@@ -58,7 +58,7 @@ var data = [
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 1500.0,
     minimum: 1,
-    category: "Communications",
+    category: "Digital Avionics",
   },
   {
     id: 123007,

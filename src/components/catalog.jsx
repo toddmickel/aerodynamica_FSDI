@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+
 import "./catalog.css";
 import Product from "./product";
 import ProductService from "./../services/productService";
@@ -24,11 +27,13 @@ class Catalog extends Component {
             <h1>Our Catalog</h1>
             {this.state.categories.map((category) => (
               <button onClick={() => this.selectCategory(category)} key={category} className="btn btn-info btn-sm btn-category">
-                {category}
+                {category}&nbsp;
+                <FontAwesomeIcon icon={faChevronCircleRight} />
               </button>
             ))}
             <button onClick={() => this.selectCategory("")} key="All" className="btn btn-info btn-sm btn-category">
-              All
+              All&nbsp;
+              <FontAwesomeIcon icon={faChevronCircleRight} />
             </button>
           </div>
           <div className="catalog-row">

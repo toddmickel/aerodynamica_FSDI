@@ -1,0 +1,21 @@
+.about-text {
+    width: 75%;
+    text-align: justify;
+    margin-bottom: 2.5rem;
+}
+
+#html-icon {
+    color: rgb(227, 76, 38);
+}
+
+#css-icon {
+    color: rgb(38, 77, 228);
+}
+
+#bootstrap-icon {
+    color: #6f42c1;
+}
+
+#react-icon {
+    color: #61DBFB
+}
