@@ -9,3 +9,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.btn-category {
+    margin: 1rem .3rem;
+}

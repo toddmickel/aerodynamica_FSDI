@@ -8,6 +8,7 @@ var data = [
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 500.5,
     minimum: 1,
+    category: "Analog Avionics",
   },
   {
     id: 123002,
@@ -17,6 +18,7 @@ var data = [
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 0.1,
     minimum: 100,
+    category: "Structural",
   },
   {
     id: 123003,
@@ -26,6 +28,7 @@ var data = [
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 1999.99,
     minimum: 1,
+    category: "Digital Avionics",
   },
   {
     id: 123004,
@@ -35,6 +38,7 @@ var data = [
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 3299.99,
     minimum: 1,
+    category: "Training",
   },
   {
     id: 123005,
@@ -44,6 +48,7 @@ var data = [
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 4000.0,
     minimum: 1,
+    category: "Digital Avionics",
   },
   {
     id: 123006,
@@ -53,6 +58,7 @@ var data = [
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 1500.0,
     minimum: 1,
+    category: "Communications",
   },
   {
     id: 123007,
@@ -62,6 +68,7 @@ var data = [
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 0.05,
     minimum: 100,
+    category: "Pilot Tools",
   },
 ];
 

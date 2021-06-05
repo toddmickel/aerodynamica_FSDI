@@ -32,9 +32,7 @@ class Product extends Component {
     );
   }
 
-  onQuantityChanged = (newQuantity) => {
-    this.setState({ quan: newQuantity });
-  };
+  onQuantityChanged = (newQuantity) => this.setState({ quan: newQuantity });
 
   ppuDisplay = () => {
     if (this.state.price % 1 === 0) {

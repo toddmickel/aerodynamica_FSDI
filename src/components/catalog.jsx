@@ -6,14 +6,33 @@ import ProductService from "./../services/productService";
 class Catalog extends Component {
   state = {
     products: [],
+    categories: [],
+    selectedCat: "",
   };
   render() {
+    let prodsToDisplay = this.state.products;
+
+    // filter the elements inside the prodsToDisplay
+    if (this.state.selectedCat) {
+      prodsToDisplay = prodsToDisplay.filter((prod) => prod.category === this.state.selectedCat);
+    }
+
     return (
       <React.Fragment>
         <div className="catalog-page">
-          <h1>Our Catalog</h1>
+          <div className="categories">
+            <h1>Our Catalog</h1>
+            {this.state.categories.map((category) => (
+              <button onClick={() => this.selectCategory(category)} key={category} className="btn btn-info btn-sm btn-category">
+                {category}
+              </button>
+            ))}
+            <button onClick={() => this.selectCategory("")} key="All" className="btn btn-info btn-sm btn-category">
+              All
+            </button>
+          </div>
           <div className="catalog-row">
-            {this.state.products.map((prod) => (
+            {prodsToDisplay.map((prod) => (
               <Product key={prod.id} prodData={prod}></Product>
             ))}
           </div>
@@ -22,13 +41,24 @@ class Catalog extends Component {
     );
   }
 
+  selectCategory = (cat) => {
+    console.log("User selected category " + cat);
+    this.setState({ selectedCat: cat });
+  };
+
   componentDidMount() {
     //good place to load data from server
     let service = new ProductService();
     let data = service.getCatalog();
+    let categories = [];
+
+    // find the unique categories
+    for (let i = 0; i < data.length; i++) {
+      !categories.includes(data[i].category) && categories.push(data[i].category);
+    }
 
     // put data on state
-    this.setState({ products: data });
+    this.setState({ products: data, categories: categories });
   }
 }
 
