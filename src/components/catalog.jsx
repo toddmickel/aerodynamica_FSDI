@@ -38,7 +38,7 @@ class Catalog extends Component {
           </div>
           <div className="catalog-row">
             {prodsToDisplay.map((prod) => (
-              <Product key={prod.id} prodData={prod}></Product>
+              <Product key={prod._id} prodData={prod}></Product>
             ))}
           </div>
         </div>
@@ -51,10 +51,10 @@ class Catalog extends Component {
     this.setState({ selectedCat: cat });
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     //good place to load data from server
     let service = new ProductService();
-    let data = service.getCatalog();
+    let data = await service.getCatalog();
     let categories = [];
 
     // find the unique categories

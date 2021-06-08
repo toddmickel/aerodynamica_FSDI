@@ -7,7 +7,9 @@ import { faReact } from "@fortawesome/free-brands-svg-icons";
 import "./about.css";
 
 class About extends Component {
-  state = {};
+  state = {
+    isHidden: true,
+  };
   render() {
     return (
       <React.Fragment>
@@ -23,6 +25,13 @@ class About extends Component {
         </div>
         <div className="container about-text">
           <p>Todd has had a lifelong love affair with technology. This led to his pursuing a Bachelor's degree in Computer and Information Sciences and and MBA with a Business Data Mining certificate. To cap off and refresh his programming knowledge, Todd enrolled in the FSDI program from SDGKU.</p>
+          <div>
+            <button className="btn btn-primary btn-sm" onClick={this.toggleEmail}>
+              Show/Hide Email
+            </button>
+            <br />
+            {!this.state.isHidden && <a href="mailto:todd@toddmickel.com">todd@toddmickel.com</a>}
+          </div>
         </div>
         <div className="container-lg">
           <h1>About This Project</h1>
@@ -48,6 +57,14 @@ class About extends Component {
       </React.Fragment>
     );
   }
+
+  toggleEmail = () => {
+    if (this.state.isHidden === true) {
+      this.setState({ isHidden: false });
+    } else {
+      this.setState({ isHidden: true });
+    }
+  };
 }
 
 export default About;

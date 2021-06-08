@@ -33,6 +33,11 @@ class NavBar extends Component {
                   About Us
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link active" to="/admin">
+                  Admin
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
