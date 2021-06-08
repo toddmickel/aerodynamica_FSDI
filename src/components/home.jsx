@@ -25,6 +25,8 @@ class Home extends Component {
               </Link>
             </p>
           </div>
+        </div>
+        <div className="container">
           <div className="slideshow">
             <Slide easing="ease" pauseOnHover={false} arrows={false} duration={3000}>
               <div className="each-slide">
@@ -47,9 +49,9 @@ class Home extends Component {
               </div>
             </Slide>
           </div>
-          <div className="logo">
-            <img src="/img/logo/propeller.jpg" alt="logo" className="App-logo"></img>
-          </div>
+        </div>
+        <div className="logo">
+          <img src="/img/logo/propeller.jpg" alt="logo" className="App-logo"></img>
         </div>
       </React.Fragment>
     );

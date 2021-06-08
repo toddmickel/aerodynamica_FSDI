@@ -42,12 +42,3 @@
     height: 10rem;
   }
 
-  @media (min-height: 700px) {
-      .slideshow {
-          position: fixed;
-          left: 50%;
-          bottom: 25%;
-          transform: translate(-50%, 50%);
-
-      }
-  }
