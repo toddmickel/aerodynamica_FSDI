@@ -39,3 +39,19 @@
         display: none;
     }
 }
+
+.qp-cart {
+    display: flex;
+    border-top: 1px solid black;
+    padding-top: .5rem;
+    align-items: baseline;
+    justify-content: center;
+}
+
+QuantityPicker {
+    margin: 0;
+}
+
+.qp-page {
+    margin: 0;
+}

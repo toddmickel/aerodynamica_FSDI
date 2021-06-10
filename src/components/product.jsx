@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import "./product.css";
 import QuantityPicker from "./quantityPicker";
 import NumberFormat from "react-number-format";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { addToCart } from "./../store/actions";
+import { connect } from "react-redux";
 
 class Product extends Component {
   state = {
@@ -14,7 +18,7 @@ class Product extends Component {
       <React.Fragment>
         <div className="product">
           <div className="prod-img-cont">
-            <img src={"/img/products/" + this.props.prodData.image} alt="altimeter" className="prod-image"></img>
+            <img src={"/img/products/" + this.props.prodData.image} alt="product" className="prod-image"></img>
           </div>
           <h5>{this.props.prodData.title}</h5>
           <p className="description">{this.props.prodData.description}</p>
@@ -24,9 +28,13 @@ class Product extends Component {
             <label id="total-price">Total Price: {this.totalPriceDisplay()}</label>
           </div>
 
-          <QuantityPicker onQuantityChanged={this.onQuantityChanged} mins={this.props.prodData.minimum}></QuantityPicker>
+          <div className="qp-cart">
+            <QuantityPicker onQuantityChanged={this.onQuantityChanged} mins={this.props.prodData.minimum}></QuantityPicker>
 
-          <button className="btn btn-sm btn-info">Add</button>
+            <button className="btn btn-sm btn-warning add-cart-btn" onClick={this.handleAddToCart}>
+              <FontAwesomeIcon icon={faCartPlus} />
+            </button>
+          </div>
         </div>
       </React.Fragment>
     );
@@ -50,9 +58,21 @@ class Product extends Component {
       return <NumberFormat value={total} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={2} fixedDecimalScale={true} />;
     }
   };
+
+  handleAddToCart = () => {
+    console.log("Dispatching Action");
+    // dispatch the addToCart action
+    this.props.addToCart(this.props.prodData);
+  };
 }
 
-export default Product;
+/**
+ * Connect the component to the store to read or dispatch actions
+ * connect() receives two params:
+ * 1 - A function that maps what you want to read
+ * 2 - An object with the actions you want to dispatch
+ */
+export default connect(null, { addToCart })(Product);
 
 /*
 Min info for product component:

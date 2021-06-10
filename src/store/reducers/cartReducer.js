@@ -9,8 +9,8 @@
 const cartReducer = (state = [], action) => {
   switch (action.type) {
     case "ADD_TO_CART":
-      let copy = [...state, action.payload];
-      return copy;
+      // Returning a copy of the state (cart) with the new product added
+      return [...state, action.payload];
 
     case "REMOVE_FROM_CART":
       // do something
