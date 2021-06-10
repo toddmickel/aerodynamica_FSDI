@@ -9,6 +9,25 @@
 const cartReducer = (state = [], action) => {
   switch (action.type) {
     case "ADD_TO_CART":
+      /**
+       * Create a copy of the state, then travel the array to look for the product
+       * with the same _ID and only add it if it doesn't exist.  If it does exist,
+       * update the quantity with the quantity being sent.
+       */
+      let stateCopy = [...state];
+
+      /**
+       *  if the product (action.payload) exist inside the copy (compare by id)
+       *    then just update the quantity of the object that exist in copy
+       *  otherwise
+       *     push the product to stateCopy
+       */
+      for (let i = 0; i < stateCopy.length; i++) {
+        if (stateCopy[i]._id === action.payload._id) {
+          stateCopy[i].quantity += action.payload.quantity;
+          return stateCopy;
+        }
+      }
       // Returning a copy of the state (cart) with the new product added
       return [...state, action.payload];
 

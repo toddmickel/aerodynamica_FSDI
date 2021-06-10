@@ -61,8 +61,10 @@ class Product extends Component {
 
   handleAddToCart = () => {
     console.log("Dispatching Action");
+    // create a copy of the data and add the quantity
+    let dataCopy = { ...this.props.prodData, quantity: this.state.quan };
     // dispatch the addToCart action
-    this.props.addToCart(this.props.prodData);
+    this.props.addToCart(dataCopy);
   };
 }
 
