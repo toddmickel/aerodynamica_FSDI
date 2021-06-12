@@ -12,7 +12,7 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container home-pic">
+        <div className="home-pic">
           <img src="/img/others/ADCockpit.jpg" alt="AeroDynamica Cockpit" />
         </div>
         <div className="container main-text logo">

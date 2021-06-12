@@ -45,12 +45,15 @@
 .home-pic {
     height: 25rem;
     overflow: hidden;
-    margin: 1rem auto;
+    margin: 0 0 1rem;
     width: 100%;
+    padding: 0;
 }
 
 .home-pic img {
     width: 100%;
+    margin: 0;
+    object-fit: cover;
 }
 
 .main-text {

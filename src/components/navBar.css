@@ -5,6 +5,10 @@
     padding-right: 1rem;
 }
 
+.navbar-brand img {
+    width: 15rem;
+}
+
 .mr-auto {
     margin-right: auto;
 }

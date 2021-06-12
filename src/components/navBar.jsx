@@ -13,7 +13,7 @@ class NavBar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light navbar-page">
         <Link className="navbar-brand" to="/">
-          AeroDynamica
+          <img src="/img/logo/name.png" alt="" />
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

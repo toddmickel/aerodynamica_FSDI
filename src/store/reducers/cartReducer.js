@@ -28,12 +28,12 @@ const cartReducer = (state = [], action) => {
           return stateCopy;
         }
       }
+
       // Returning a copy of the state (cart) with the new product added
       return [...state, action.payload];
 
     case "REMOVE_FROM_CART":
-      // do something
-      return state;
+      return state.filter((prod) => prod._id !== action.payload);
 
     default:
       return state;
