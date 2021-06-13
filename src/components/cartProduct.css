@@ -1,0 +1,25 @@
+.cart-product {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr) 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 1rem 2rem;
+    border: 1px solid black;
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: #e3f7fd;
+}
+
+.cart-product img {
+    width:5rem;
+
+}
+
+.cart-prod-child {
+    
+}
+
+.btn-del-cart {
+    width: 3rem;
+    height: 3rem;
+}

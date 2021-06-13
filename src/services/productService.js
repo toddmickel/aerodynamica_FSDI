@@ -3,7 +3,7 @@ import axios from "axios";
 var data = [
   {
     code: "alt",
-    image: "altimeter.jpg",
+    image: "altimeter.png",
     title: "Analog Altimeter",
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 500.5,
@@ -12,7 +12,7 @@ var data = [
   },
   {
     code: "rivet",
-    image: "aviation_rivet.jpg",
+    image: "aviation_rivet.png",
     title: "Aviation Rivet",
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 0.1,
@@ -21,7 +21,7 @@ var data = [
   },
   {
     code: "g500",
-    image: "G500_TXi.jpg",
+    image: "G500_TXi.png",
     title: "Garmin 500 TXi",
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 1999.99,
@@ -30,7 +30,7 @@ var data = [
   },
   {
     code: "gtrain",
-    image: "G1000_DesktopTrainer.jpg",
+    image: "G1000_DesktopTrainer.png",
     title: "Garmin 1000 Desktop Trainer",
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 3299.99,
@@ -39,7 +39,7 @@ var data = [
   },
   {
     code: "gi275",
-    image: "GI_275_ADI.jpg",
+    image: "GI_275_ADI.png",
     title: "GI 275 ADI",
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 4000.0,
@@ -48,7 +48,7 @@ var data = [
   },
   {
     code: "vhfradio",
-    image: "IC-A220T_VHF.jpg",
+    image: "IC-A220T_VHF.png",
     title: "IC-A220T VHF Radio",
     description: "Product description goes here. Several lines of text for each item, including plain language description and any limitations to airframes.",
     price: 1500.0,
