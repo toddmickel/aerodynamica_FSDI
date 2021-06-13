@@ -5,9 +5,12 @@ import "./cartProduct.css";
 import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import NumberFormat from "react-number-format";
 
 class CartProduct extends Component {
-  state = {};
+  state = {
+    price: this.props.prodData.price,
+  };
   render() {
     return (
       <React.Fragment>
@@ -17,7 +20,7 @@ class CartProduct extends Component {
           <p className="cart-prod-prices cart-prod-child">
             Unit Price:
             <br />
-            {this.props.prodData.price}
+            {this.ppuDisplay()}
           </p>
           <p className="cart-prod-quan cart-prod-child">
             Quantity Ordered:
@@ -43,7 +46,19 @@ class CartProduct extends Component {
 
   getTotal = () => {
     let total = this.props.prodData.quantity * this.props.prodData.price;
-    return total.toFixed(2);
+    if (total % 1 === 0) {
+      return <NumberFormat value={total} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={0} fixedDecimalScale={true} />;
+    } else {
+      return <NumberFormat value={total} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={2} fixedDecimalScale={true} />;
+    }
+  };
+
+  ppuDisplay = () => {
+    if (this.state.price % 1 === 0) {
+      return <NumberFormat value={this.state.price} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={0} fixedDecimalScale={true} />;
+    } else {
+      return <NumberFormat value={this.state.price} displayType={"text"} thousandSeparator={true} prefix={"$"} decimalScale={2} fixedDecimalScale={true} />;
+    }
   };
 }
 

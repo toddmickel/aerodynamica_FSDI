@@ -1,0 +1,35 @@
+.cart-page {
+    display: grid;
+    grid-template-columns: 3fr, 1fr;
+    justify-items: right;
+}
+
+.cart-page h1 {
+    grid-column: 1 / span 2;
+    justify-self: center;
+}
+
+.cart-page h3 {
+    margin-top: 5rem;
+}
+
+.products {
+    grid-column: 1;
+}
+
+.total {
+    grid-column: 2;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #e3f7fd;
+    width: 25vw;
+    height: 13rem;
+    font-weight: 700;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.total button {
+    margin-top: 1rem;
+}
