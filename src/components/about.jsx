@@ -40,18 +40,35 @@ class About extends Component {
           <p>This project has required extensive use of the following technologies:</p>
           <ul>
             <li>
-              HTML5 <FontAwesomeIcon icon={faHtml5} id="html-icon" />
+              HTML5{" "}
+              <a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faHtml5} id="html-icon" />
+              </a>
             </li>
             <li>
-              CSS3 <FontAwesomeIcon icon={faCss3Alt} id="css-icon" />
+              CSS3{" "}
+              <a href="https://www.w3.org/Style/CSS/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faCss3Alt} id="css-icon" />
+              </a>
             </li>
             <li>
-              Bootstrap <FontAwesomeIcon icon={faBootstrap} id="bootstrap-icon" />
+              Bootstrap{" "}
+              <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faBootstrap} id="bootstrap-icon" />
+              </a>
             </li>
             <li>
-              React <FontAwesomeIcon icon={faReact} id="react-icon" />
+              React{" "}
+              <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faReact} id="react-icon" />
+              </a>
             </li>
-            <li>Redux</li>
+            <li>
+              Redux{" "}
+              <a href="https://redux.js.org/" target="_blank" rel="noreferrer">
+                <img src="/img/others/reduxicon.png" alt="redux" id="redux-icon" />
+              </a>
+            </li>
           </ul>
         </div>
       </React.Fragment>

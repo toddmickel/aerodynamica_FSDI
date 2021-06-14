@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import NumberFormat from "react-number-format";
+import QuantityDisplay from "./quantityDisplay";
 
 class CartProduct extends Component {
   state = {
@@ -25,7 +26,7 @@ class CartProduct extends Component {
           <p className="cart-prod-quan cart-prod-child">
             Quantity Ordered:
             <br />
-            {this.props.prodData.quantity}
+            <QuantityDisplay quantity={this.props.prodData.quantity} />
           </p>
           <p className="cart-prod-prices cart-prod-child">
             Total:
